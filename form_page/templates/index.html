@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'form_page/css/style.css' %}"
+  <link rel="stylesheet" type="text/css" href="{% static 'form_page/css/media-query.css' %}">
+  <title>Formulário Grupo Scenarium</title>
+</head>
+
+<body>
+
+  <form action="{% url 'mostrar_formulario' %}" method="POST">
+    {% csrf_token %}
+
+    <label for="{{ form.cnpj.id_for_label }}">CNPJ:</label>
+    {{ form.cnpj }}
+    {% if form.cnpj.errors %}
+        <div class="error">{{ form.cnpj.errors }}</div>
+    {% endif %}
+
+    <label for="{{ form.categoria.id_for_label }}">Categoria:</label>
+    {{ form.categoria }}
+
+    <label for="{{ form.empresa.id_for_label }}">Empresa:</label>
+    {{ form.empresa }}
+
+    <label for="{{ form.endereco.id_for_label }}">Endereço:</label>
+    {{ form.endereco }}
+
+    <label for="{{ form.cep.id_for_label }}">CEP:</label>
+    {{ form.cep }}
+
+    <label for="{{ form.email.id_for_label }}">Email:</label>
+    {{ form.email }}
+
+    <label for="{{ form.contato.id_for_label }}">Contato:</label>
+    {{ form.contato }}
+
+    <!--Seção de RAMO - Inicio-->
+    <label for="{{ form.tempo_atividade.id_for_label }}">Tempo de atividade no ramo:</label>
+    {{ form.tempo_atividade }}
+
+    <label for="{{ form.data_pesquisa.id_for_label }}">Data da Pesquisa: </label>
+    {{ form.data_pesquisa }}
+
+    <label for="{{ form.cliente1.id_for_label }}">Cliente 1:</label>
+    {{ form.cliente1 }}
+
+    <label for="{{ form.cliente2.id_for_label }}">Cliente 2:</label>
+    {{ form.cliente2 }}
+
+    <label for="{{ form.cliente3.id_for_label }}">Cliente 3:</label>
+    {{ form.cliente3 }}
+
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+
+</html>
