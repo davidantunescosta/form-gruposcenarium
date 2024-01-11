@@ -13,7 +13,7 @@ def exportar_para_excel(modeladmin, request, queryset):
     ws.title = 'Fornecedores'
 
     # Escrevendo os cabeçalhos
-    colunas = ['CNPJ', 'Categoria', 'Empresa', 'Endereço', 'CEP', 'Email', 'Contato', 'Tempo Atividade']
+    colunas = ['CNPJ', 'Categoria', 'Empresa', 'Endereço', 'CEP', 'Email', 'Site', 'Contato', 'Tempo Atividade']
     for col_num, column_title in enumerate(colunas, 1):
         ws.cell(row=1, column=col_num, value=column_title)
 
@@ -25,8 +25,9 @@ def exportar_para_excel(modeladmin, request, queryset):
         ws.cell(row=row_num, column=4, value=fornecedor.endereco)
         ws.cell(row=row_num, column=5, value=fornecedor.cep)
         ws.cell(row=row_num, column=6, value=fornecedor.email)
-        ws.cell(row=row_num, column=7, value=fornecedor.contato)
-        ws.cell(row=row_num, column=8, value=fornecedor.tempo_atividade)
+        ws.cell(row=row_num, column=7, value=fornecedor.site)
+        ws.cell(row=row_num, column=8, value=fornecedor.contato)
+        ws.cell(row=row_num, column=9, value=fornecedor.tempo_atividade)
 
     wb.save(response)
     return response

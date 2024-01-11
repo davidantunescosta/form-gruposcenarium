@@ -7,6 +7,7 @@ class Fornecedor(models.Model):
     endereco = models.CharField(max_length=255)
     cep = models.CharField(max_length=9)
     email = models.EmailField()
+    site = models.URLField(max_length=200, blank=True)
     contato = models.CharField(max_length=20)
     data_pesquisa = models.DateField()
     cliente1 = models.CharField(max_length=100)

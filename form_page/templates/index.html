@@ -8,11 +8,11 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'form_page/css/style.css' %}"
+      href="{% static 'form_page/css/styles.css' %}" /> 
       <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'form_page/css/media-query.css' %}"
+      href="{% static 'form_page/css/media.css' %}"
     />
     <title>Formulário Grupo Scenarium</title>
   </head>
@@ -47,7 +47,14 @@
       {{ form.cep }}
 
       <label for="{{ form.email.id_for_label }}">Email:</label>
-      {{ form.email }}
+      {{ form.email }} {% if form.email.errors %}
+      <div class="error">{{ form.email.errors }}</div>
+      {% endif %}
+
+      <label for="{{ form.site.id_for_label }}">Site:</label>
+      {{ form.site }} {% if form.site.errors %}
+      <div class="error">{{ form.site.errors }}</div>
+      {% endif %}
 
       <label for="{{ form.contato.id_for_label }}">Contato:</label>
       {{ form.contato }}

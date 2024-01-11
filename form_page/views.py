@@ -10,7 +10,7 @@ def mostrar_formulario(request):
         form = FornecedorForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('obrigado')
+            return redirect('mostrar_obrigado')
     else:
         form = FornecedorForm()
     return render(request, 'index.html', {'form': form})
