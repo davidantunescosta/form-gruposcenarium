@@ -2,49 +2,83 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrigado</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'form_page/css/agradecimento.css' %}"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obrigado</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'form_page/css/obrigado.css' %}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'form_page/css/media.css' %}"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--Link para usar o Awesome Icons-->
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Link para usar o Awesome Icons-->
+  </head>
 
-<body>
-  <main class="container">
-    <div class="contatiner-box">
-      <h1>Muito Obrigado!</h1><br>
-      <p>Qualquer dúvida estamos a disposição</p>
-    </div>
+  <body>
+    <main class="container">
+      <div class="contatiner-box">
+        <div class="logo">
+          <img src={%static "form_page/img/dolores.png" %} alt="Dolores" /> <img
+          id="mangue" src={%static "form_page/img/mangue.png" %} alt="Mangue" />
+          <img src={%static "form_page/img/logors.jpg" %} alt="RioScenarium" />
+          <img src={%static "form_page/img/santoscenarium.jpg" %}
+          alt="SantoScenarium" />
+        </div>
 
-    <div class="rede-social">
-      <p>Nossas redes: </p><br>
+        <h1>Formulário Enviado</h1>
+        <br />
+        <h2>O Grupo Scenarium agradece a sua coloboração!</h2>
+        <br />
+        <br />
+      </div>
 
-      <ul>
-        <a href="https://www.instagram.com/rioscenarium/" target="_blank">
-          <li><i class="fa fa-instagram"></i> Rio Scenarium</li>
+      <div class="rede-social">
+        <h3>Nossas redes:</h3>
+        <br />
+
+        <ul>
+          <a href="https://www.instagram.com/doloresclub/" target="_blank">
+            <li><i class="fa fa-instagram"> Dolores Club</i></li>
+          </a>
+          <a
+            href="https://www.instagram.com/manguesecocachacaria/"
+            target="_blank"
+          >
+            <li><i class="fa fa-instagram"> Mangue Seco</i></li>
+          </a>
+          <a href="https://www.instagram.com/rioscenarium/" target="_blank">
+            <li><i class="fa fa-instagram"> Rio Scenarium</i></li>
+          </a>
+          <a href="https://www.instagram.com/santo_scenarium/" target="_blank">
+            <li><i class="fa fa-instagram"> Santo Scenarium</i></li>
+          </a>
+        </ul>
+      </div>
+      <br /><br />
+      <h3>Dúvidas? Fale conosco!</h3>
+      <br /><br />
+
+      <div class="wpp">
+        <a
+          href="https://api.whatsapp.com/send?phone=5521982340784&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20formul%C3%A1rio,%20gostaria%20de%20tirar,%20algumas%20d%C3%BAvidas.%20=)"
+          target="_blank"
+          ><i class="fa fa-whatsapp" aria-hidden="true"> whatsapp</i>
         </a>
-        <a href="https://www.instagram.com/manguesecocachacaria/" target="_blank">
-          <li><i class="fa fa-instagram"> Mangue Seco</i></li>
-        </a>
-        <a href="https://www.instagram.com/santo_scenarium/" target="_blank">
-          <li><i class="fa fa-instagram"> Santo Scenarium</i></li>
-        </a>
-        <a href="https://www.instagram.com/doloresclub/" target="_blank">
-          <li><i class="fa fa-instagram"> Dolores Club</i></li>
-        </a>
-      </ul>
-
-    </div> <br><br>
-    <span>Dúvidas? Fale conosco!</span><br><br>
-
-    <div class="wpp">
-      <a href="https://api.whatsapp.com/send?phone=5521982340784&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20formul%C3%A1rio,%20gostaria%20de%20tirar,%20algumas%20d%C3%BAvidas.%20=)" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> whatsapp</a>
-    </div>
-  </main>
-</body>
-
+      </div>
+    </main>
+  </body>
 </html>
